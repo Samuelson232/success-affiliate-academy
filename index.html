@@ -1,160 +1,489 @@
 
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Learn affiliate marketing, promote products and grow your online business with Success Affiliate Academy.">
-  <title>Success Affiliate Academy</title>
-  <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      font-family: Arial, sans-serif;
-      background: #f8f9fc;
-      color: #17243b;
-      line-height: 1.6;
-    }
-    header {
-      background: #101d35;
-      color: white;
-      padding: 20px;
-      text-align: center;
-      border-bottom: 4px solid #d9ad48;
-    }
-    header h1 { color: #e9bd59; font-size: 25px; }
-    nav { margin-top: 12px; }
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 9px;
-      font-size: 14px;
-    }
-    .hero {
-      background: linear-gradient(135deg, #101d35, #263d61);
-      color: white;
-      text-align: center;
-      padding: 75px 20px;
-    }
-    .hero h2 {
-      color: #f1c65f;
-      font-size: 36px;
-      margin-bottom: 15px;
-    }
-    .hero p {
-      max-width: 600px;
-      margin: 0 auto 25px;
-    }
-    .button {
-      display: inline-block;
-      background: #e2b64e;
-      color: #101d35;
-      padding: 13px 25px;
-      border-radius: 7px;
-      text-decoration: none;
-      font-weight: bold;
-      margin: 5px;
-    }
-    section {
-      padding: 50px 20px;
-      text-align: center;
-    }
-    section h2 { margin-bottom: 20px; }
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 18px;
-      max-width: 1000px;
-      margin: 25px auto;
-    }
-    .card {
-      background: white;
-      padding: 25px;
-      border-radius: 12px;
-      box-shadow: 0 3px 15px #00000012;
-    }
-    .card h3 { color: #a77b1e; margin-bottom: 10px; }
-    .highlight { background: #edf1f8; }
-    footer {
-      background: #101d35;
-      color: white;
-      text-align: center;
-      padding: 25px;
-    }
-    footer p { color: #e9bd59; }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Learn affiliate marketing and digital skills with Success Affiliate Academy.">
+<title>Success Affiliate Academy</title>
+
+<style>
+:root {
+  --navy: #101d35;
+  --blue: #263d61;
+  --gold: #f1c65f;
+  --light: #f4f6fb;
+  --white: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: Arial, sans-serif;
+  background: var(--light);
+  color: #17243b;
+  line-height: 1.7;
+}
+
+header {
+  background: var(--navy);
+  color: white;
+  padding: 20px 6%;
+  text-align: center;
+  border-bottom: 4px solid var(--gold);
+}
+
+.logo {
+  color: var(--gold);
+  font-size: 25px;
+  font-weight: bold;
+}
+
+header p { margin-top: 5px; }
+
+nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-top: 16px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover { color: var(--gold); }
+
+.hero {
+  background: linear-gradient(135deg, var(--navy), var(--blue));
+  color: white;
+  text-align: center;
+  padding: 85px 20px;
+}
+
+.hero h1 {
+  color: var(--gold);
+  font-size: clamp(32px, 6vw, 48px);
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  max-width: 680px;
+  margin: 0 auto 25px;
+  font-size: 18px;
+}
+
+.button {
+  display: inline-block;
+  background: var(--gold);
+  color: var(--navy);
+  padding: 13px 24px;
+  border-radius: 7px;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 6px;
+}
+
+.button:hover { background: white; }
+
+section {
+  padding: 60px 7%;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 30px;
+  color: var(--navy);
+  margin-bottom: 12px;
+}
+
+.section-intro {
+  max-width: 700px;
+  margin: 0 auto 30px;
+}
+
+.highlight { background: #e9eef7; }
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 22px;
+  max-width: 1100px;
+  margin: 30px auto;
+  text-align: left;
+}
+
+.card {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px #00000010;
+}
+
+.card h3 {
+  color: #a77b1e;
+  margin: 12px 0;
+}
+
+.number {
+  color: #c28e1c;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.card p { color: #596579; }
+
+.lesson {
+  margin-top: 18px;
+  border-top: 1px solid #e5e7eb;
+  padding-top: 12px;
+}
+
+.lesson summary {
+  color: var(--blue);
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.lesson-content {
+  padding-top: 12px;
+  color: #596579;
+}
+
+.roadmap {
+  max-width: 750px;
+  margin: 25px auto;
+  text-align: left;
+}
+
+.roadmap div {
+  background: white;
+  padding: 18px;
+  margin-bottom: 12px;
+  border-left: 5px solid var(--gold);
+  border-radius: 6px;
+}
+
+.promoter {
+  background: var(--navy);
+  color: white;
+}
+
+.promoter h2 { color: var(--gold); }
+
+.promoter .card { color: #17243b; }
+
+.faq {
+  max-width: 750px;
+  margin: 15px auto;
+  text-align: left;
+}
+
+.faq details {
+  background: white;
+  padding: 18px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+}
+
+.faq summary {
+  cursor: pointer;
+  font-weight: bold;
+  color: var(--navy);
+}
+
+.faq p {
+  margin-top: 12px;
+  color: #596579;
+}
+
+.contact {
+  background: #e9eef7;
+}
+
+footer {
+  background: #0b1527;
+  color: white;
+  text-align: center;
+  padding: 30px 15px;
+}
+
+footer p { color: var(--gold); }
+
+footer a {
+  color: white;
+  margin: 8px;
+  text-decoration: none;
+}
+
+@media(max-width: 600px) {
+  header { padding: 20px 12px; }
+  nav { gap: 13px; }
+  nav a { font-size: 14px; }
+  section { padding: 45px 18px; }
+  .hero { padding: 65px 18px; }
+  .hero p { font-size: 16px; }
+}
+</style>
 </head>
+
 <body>
 
 <header>
-  <h1>SUCCESS AFFILIATE ACADEMY</h1>
-  <p>LEARN • PROMOTE • EARN</p>
+  <div class="logo">SUCCESS AFFILIATE ACADEMY</div>
+  <p>LEARN • PROMOTE • GROW</p>
+
   <nav>
     <a href="#home">Home</a>
-    <a href="#courses">Courses</a>
-    <a href="#promoters">Promoters</a>
     <a href="#about">About</a>
+    <a href="#courses">Courses</a>
+    <a href="#roadmap">Learning Path</a>
+    <a href="#promoters">Promoters</a>
+    <a href="#contact">Contact</a>
   </nav>
 </header>
 
 <div class="hero" id="home">
-  <h2>Build Your Digital Future</h2>
+  <h1>Build Your Digital Future</h1>
+
   <p>
-    Learn affiliate marketing, develop digital skills
-    and discover how to promote products and services
-    to customers around the world.
+    Discover affiliate marketing, develop digital skills
+    and learn how to create valuable content and promote
+    products responsibly.
   </p>
+
   <a class="button" href="#courses">Explore Courses</a>
-  <a class="button" href="#promoters">Become a Promoter</a>
+  <a class="button" href="#about">Discover Our Academy</a>
 </div>
 
 <section id="about">
-  <h2>Welcome to Success Affiliate Academy</h2>
-  <p>
-    Our mission is to empower people worldwide with
-    practical affiliate marketing knowledge and skills.
+  <h2 class="section-title">Welcome to Our Academy</h2>
+
+  <p class="section-intro">
+    Success Affiliate Academy is a learning platform
+    designed to help beginners understand affiliate
+    marketing, digital entrepreneurship and online
+    business skills.
   </p>
 </section>
 
-<section id="courses" class="highlight">
-  <h2>Our Training Programmes</h2>
+<section class="highlight" id="courses">
+  <h2 class="section-title">Our Training Programmes</h2>
+
+  <p class="section-intro">
+    Explore our learning programmes and study at your pace.
+    Select a lesson to see what you will learn.
+  </p>
+
   <div class="cards">
+
     <div class="card">
-      <h3>Beginner Training</h3>
-      <p>Understand affiliate marketing and learn the basics.</p>
+      <div class="number">01</div>
+      <h3>Affiliate Marketing Basics</h3>
+      <p>Understand the foundations of affiliate marketing.</p>
+
+      <details class="lesson">
+        <summary>Explore lessons</summary>
+        <div class="lesson-content">
+          <p><strong>Lesson 1:</strong> What is affiliate marketing?</p>
+          <p><strong>Lesson 2:</strong> Understanding affiliates and merchants.</p>
+          <p><strong>Lesson 3:</strong> How referral links work.</p>
+        </div>
+      </details>
     </div>
+
     <div class="card">
-      <h3>Marketing Skills</h3>
-      <p>Learn WhatsApp, Facebook and TikTok promotion.</p>
+      <div class="number">02</div>
+      <h3>Digital Marketing Skills</h3>
+      <p>Discover different ways to communicate online.</p>
+
+      <details class="lesson">
+        <summary>Explore lessons</summary>
+        <div class="lesson-content">
+          <p><strong>Lesson 1:</strong> Introduction to digital marketing.</p>
+          <p><strong>Lesson 2:</strong> Social media fundamentals.</p>
+          <p><strong>Lesson 3:</strong> Understanding your audience.</p>
+        </div>
+      </details>
     </div>
+
     <div class="card">
-      <h3>Business Growth</h3>
-      <p>Learn content creation, traffic and sales strategies.</p>
+      <div class="number">03</div>
+      <h3>Content Creation</h3>
+      <p>Learn how to create useful digital content.</p>
+
+      <details class="lesson">
+        <summary>Explore lessons</summary>
+        <div class="lesson-content">
+          <p><strong>Lesson 1:</strong> Writing useful articles.</p>
+          <p><strong>Lesson 2:</strong> Creating educational videos.</p>
+          <p><strong>Lesson 3:</strong> Content planning.</p>
+        </div>
+      </details>
     </div>
+
+    <div class="card">
+      <div class="number">04</div>
+      <h3>Website Development</h3>
+      <p>Understand how websites are designed and built.</p>
+
+      <details class="lesson">
+        <summary>Explore lessons</summary>
+        <div class="lesson-content">
+          <p><strong>Lesson 1:</strong> Introduction to HTML.</p>
+          <p><strong>Lesson 2:</strong> Understanding CSS.</p>
+          <p><strong>Lesson 3:</strong> Building a simple webpage.</p>
+        </div>
+      </details>
+    </div>
+
+    <div class="card">
+      <div class="number">05</div>
+      <h3>Business Development</h3>
+      <p>Learn basic planning and online business principles.</p>
+
+      <details class="lesson">
+        <summary>Explore lessons</summary>
+        <div class="lesson-content">
+          <p><strong>Lesson 1:</strong> Setting business goals.</p>
+          <p><strong>Lesson 2:</strong> Understanding customers.</p>
+          <p><strong>Lesson 3:</strong> Evaluating business ideas.</p>
+        </div>
+      </details>
+    </div>
+
+    <div class="card">
+      <div class="number">06</div>
+      <h3>Affiliate Ethics</h3>
+      <p>Understand honesty and responsibility in promotion.</p>
+
+      <details class="lesson">
+        <summary>Explore lessons</summary>
+        <div class="lesson-content">
+          <p><strong>Lesson 1:</strong> Honest product reviews.</p>
+          <p><strong>Lesson 2:</strong> Affiliate disclosures.</p>
+          <p><strong>Lesson 3:</strong> Protecting customer trust.</p>
+        </div>
+      </details>
+    </div>
+
   </div>
 </section>
 
-<section id="promoters">
-  <h2>Become a Promoter</h2>
-  <div class="card">
-    <h3>Earn 30% Commission</h3>
-    <p>
-      Join our promoter programme, share your unique
-      referral link and earn commission on eligible,
-      verified course sales.
-    </p>
-    <p><strong>Registration and commission terms will be announced soon.</strong></p>
+<section id="roadmap">
+  <h2 class="section-title">Your Learning Journey</h2>
+
+  <p class="section-intro">
+    Follow these stages as you build your knowledge.
+  </p>
+
+  <div class="roadmap">
+    <div><strong>Step 1:</strong> Learn the basics of affiliate marketing.</div>
+    <div><strong>Step 2:</strong> Understand digital marketing.</div>
+    <div><strong>Step 3:</strong> Practise content creation.</div>
+    <div><strong>Step 4:</strong> Learn website development.</div>
+    <div><strong>Step 5:</strong> Understand responsible promotion.</div>
   </div>
+</section>
+
+<section class="promoter" id="promoters">
+  <h2 class="section-title">Promoter Programme</h2>
+
+  <p class="section-intro">
+    Interested in learning how affiliate promotion works?
+    Discover referral marketing and responsible product promotion.
+  </p>
+
+  <div class="card" style="max-width:650px;margin:auto;">
+    <h3>Learn About Affiliate Promotion</h3>
+    <p>
+      Understand how referral links, product recommendations
+      and commission arrangements work.
+    </p>
+    <p style="margin-top:12px;">
+      Programme registration and eligibility details
+      will be announced when available.
+    </p>
+  </div>
+</section>
+
+<section class="highlight" id="faq">
+  <h2 class="section-title">Frequently Asked Questions</h2>
+
+  <div class="faq">
+    <details>
+      <summary>What is Success Affiliate Academy?</summary>
+      <p>
+        It is an educational platform for learning affiliate
+        marketing and digital business skills.
+      </p>
+    </details>
+
+    <details>
+      <summary>Who can learn here?</summary>
+      <p>
+        Beginners interested in learning digital skills
+        and online business fundamentals.
+      </p>
+    </details>
+
+    <details>
+      <summary>Do I need experience?</summary>
+      <p>
+        No. Our introductory lessons are designed
+        for people who are starting from the basics.
+      </p>
+    </details>
+
+    <details>
+      <summary>Does learning guarantee income?</summary>
+      <p>
+        No. Learning affiliate marketing does not guarantee
+        income or business success.
+      </p>
+    </details>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <h2 class="section-title">Contact Our Academy</h2>
+  <p>
+    Thank you for visiting Success Affiliate Academy.
+  </p>
+  <p>Learn • Build • Grow</p>
 </section>
 
 <footer>
   <h3>SUCCESS AFFILIATE ACADEMY</h3>
-  <p>Learn • Promote • Earn</p>
-  <p>Your Success, Our Mission.</p>
-  <small>© 2026 Success Affiliate Academy</small>
+  <p>Learn • Promote • Grow</p>
+
+  <p style="margin:12px 0;">
+    <a href="#home">Home</a>
+    <a href="#courses">Courses</a>
+    <a href="#about">About</a>
+    <a href="#faq">FAQs</a>
+  </p>
+
+  <small>
+    © <span id="year"></span> Success Affiliate Academy.
+    All rights reserved.
+  </small>
 </footer>
+
+<script>
+document.getElementById("year").textContent =
+  new Date().getFullYear();
+</script>
 
 </body>
 </html>
