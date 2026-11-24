@@ -5,501 +5,93 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Learn affiliate marketing and digital skills with Success Affiliate Academy.">
-<title>Success Affiliate Academy</title>
-
+<meta name="theme-color" content="#101d35">
+<title>Success Affiliate Academy | Learn • Promote • Grow</title>
 <style>
-:root {
-  --navy: #101d35;
-  --blue: #263d61;
-  --gold: #f1c65f;
-  --light: #f4f6fb;
-  --white: #ffffff;
-}
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-html { scroll-behavior: smooth; }
-
-body {
-  font-family: Arial, sans-serif;
-  background: var(--light);
-  color: #17243b;
-  line-height: 1.7;
-}
-
-header {
-  background: var(--navy);
-  color: white;
-  padding: 20px 6%;
-  text-align: center;
-  border-bottom: 4px solid var(--gold);
-}
-
-.logo {
-  color: var(--gold);
-  font-size: 25px;
-  font-weight: bold;
-}
-
-header p { margin-top: 5px; }
-
-nav {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 24px;
-  margin-top: 16px;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-nav a:hover { color: var(--gold); }
-
-.hero {
-  background: linear-gradient(135deg, var(--navy), var(--blue));
-  color: white;
-  text-align: center;
-  padding: 85px 20px;
-}
-
-.hero h1 {
-  color: var(--gold);
-  font-size: clamp(32px, 6vw, 48px);
-  line-height: 1.2;
-  margin-bottom: 20px;
-}
-
-.hero p {
-  max-width: 680px;
-  margin: 0 auto 25px;
-  font-size: 18px;
-}
-
-.button {
-  display: inline-block;
-  background: var(--gold);
-  color: var(--navy);
-  padding: 13px 24px;
-  border-radius: 7px;
-  text-decoration: none;
-  font-weight: bold;
-  margin: 6px;
-}
-
-.button:hover { background: white; }
-
-section {
-  padding: 60px 7%;
-  text-align: center;
-}
-
-.section-title {
-  font-size: 30px;
-  color: var(--navy);
-  margin-bottom: 12px;
-}
-
-.section-intro {
-  max-width: 700px;
-  margin: 0 auto 30px;
-}
-
-.highlight { background: #e9eef7; }
-
-.cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-  gap: 22px;
-  max-width: 1100px;
-  margin: 30px auto;
-  text-align: left;
-}
-
-.card {
-  background: white;
-  padding: 25px;
-  border-radius: 12px;
-  box-shadow: 0 4px 16px #00000010;
-}
-
-.card h3 {
-  color: #a77b1e;
-  margin: 12px 0;
-}
-
-.number {
-  color: #c28e1c;
-  font-size: 30px;
-  font-weight: bold;
-}
-
-.card p { color: #596579; }
-
-.lesson {
-  margin-top: 18px;
-  border-top: 1px solid #e5e7eb;
-  padding-top: 12px;
-}
-
-.lesson summary {
-  color: var(--blue);
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.lesson-content {
-  padding-top: 12px;
-  color: #596579;
-}
-
-.roadmap {
-  max-width: 750px;
-  margin: 25px auto;
-  text-align: left;
-}
-
-.roadmap div {
-  background: white;
-  padding: 18px;
-  margin-bottom: 12px;
-  border-left: 5px solid var(--gold);
-  border-radius: 6px;
-}
-
-.promoter {
-  background: var(--navy);
-  color: white;
-}
-
-.promoter h2 { color: var(--gold); }
-
-.promoter .card { color: #17243b; }
-
-.faq {
-  max-width: 750px;
-  margin: 15px auto;
-  text-align: left;
-}
-
-.faq details {
-  background: white;
-  padding: 18px;
-  margin-bottom: 12px;
-  border-radius: 8px;
-}
-
-.faq summary {
-  cursor: pointer;
-  font-weight: bold;
-  color: var(--navy);
-}
-
-.faq p {
-  margin-top: 12px;
-  color: #596579;
-}
-
-.contact {
-  background: #e9eef7;
-}
-
-footer {
-  background: #0b1527;
-  color: white;
-  text-align: center;
-  padding: 30px 15px;
-}
-
-footer p { color: var(--gold); }
-
-footer a {
-  color: white;
-  margin: 8px;
-  text-decoration: none;
-}
-
-@media(max-width: 600px) {
-  header { padding: 20px 12px; }
-  nav { gap: 13px; }
-  nav a { font-size: 14px; }
-  section { padding: 45px 18px; }
-  .hero { padding: 65px 18px; }
-  .hero p { font-size: 16px; }
-}
+:root{--navy:#101d35;--blue:#263d61;--gold:#f1c65f;--light:#f4f6fb;--white:#fff;--ink:#17243b;--muted:#647087;--line:#e3e8f0;--green:#16845b;--shadow:0 8px 28px #101d3512}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{font-family:Arial,sans-serif;background:var(--light);color:var(--ink);line-height:1.65}button,a{font:inherit}a{color:inherit}.site-header{background:var(--navy);color:#fff;padding:17px 5%;border-bottom:4px solid var(--gold)}.header-inner{max-width:1180px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap}.brand{text-decoration:none}.logo{font-size:clamp(18px,3vw,25px);font-weight:800;color:var(--gold);letter-spacing:.3px}.tagline{font-size:13px;letter-spacing:2px}.nav{display:flex;gap:19px;flex-wrap:wrap}.nav a{font-size:14px;text-decoration:none;font-weight:700;color:#fff}.nav a:hover{color:var(--gold)}.hero{background:linear-gradient(135deg,var(--navy),var(--blue));color:#fff;text-align:center;padding:78px 20px}.hero-inner{max-width:780px;margin:auto}.hero h1{color:var(--gold);font-size:clamp(32px,6vw,50px);line-height:1.15;margin-bottom:18px}.hero p{font-size:18px;margin:0 auto 24px;max-width:700px}.btn{display:inline-flex;justify-content:center;align-items:center;gap:8px;border:0;border-radius:8px;padding:12px 20px;background:var(--gold);color:var(--navy);font-weight:800;text-decoration:none;cursor:pointer;transition:.18s}.btn:hover{filter:brightness(1.05);transform:translateY(-1px)}.btn.secondary{background:#fff;color:var(--navy)}.btn.dark{background:var(--navy);color:#fff}.btn.outline{background:transparent;border:1px solid var(--line);color:var(--navy)}.btn:disabled{opacity:.45;cursor:not-allowed;transform:none}.section{padding:58px 6%;text-align:center}.section.alt{background:#e9eef7}.wrap{max-width:1120px;margin:auto}.section-title{font-size:clamp(25px,4vw,32px);color:var(--navy);margin-bottom:10px}.intro{max-width:720px;margin:0 auto 28px;color:var(--muted)}.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(245px,1fr));gap:20px;text-align:left;margin:28px auto}.card{background:#fff;padding:23px;border-radius:13px;box-shadow:var(--shadow);border:1px solid #edf0f5}.card h3{color:#9b7118;margin:7px 0}.card p{color:var(--muted)}.number{font-size:27px;font-weight:800;color:#bd8a20}.card-meta{display:flex;justify-content:space-between;gap:8px;align-items:center;margin:15px 0 12px;font-size:13px;color:var(--muted)}.progress-track{height:8px;background:#e9edf3;border-radius:20px;overflow:hidden}.progress-fill{height:100%;width:0;background:var(--green);border-radius:20px;transition:width .2s}.card .btn{width:100%;margin-top:15px}.dashboard{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:14px;margin:24px auto;text-align:left}.stat{background:#fff;border-radius:12px;padding:18px;border:1px solid var(--line)}.stat strong{display:block;font-size:27px;color:var(--navy)}.stat span{color:var(--muted);font-size:13px}.roadmap{max-width:760px;margin:25px auto;text-align:left}.roadmap div{background:#fff;padding:16px 18px;margin-bottom:11px;border-left:5px solid var(--gold);border-radius:7px}.promoter{background:var(--navy);color:#fff}.promoter .section-title{color:var(--gold)}.promoter .intro{color:#e3e9f2}.promoter-box{max-width:680px;margin:auto;background:#fff;color:var(--ink);padding:25px;border-radius:12px;text-align:left}.faq{max-width:780px;margin:18px auto;text-align:left}.faq details{background:#fff;padding:16px 18px;margin-bottom:10px;border-radius:8px}.faq summary{font-weight:700;cursor:pointer;color:var(--navy)}.faq p{color:var(--muted);margin-top:10px}.contact{background:#e9eef7}.footer{background:#0b1527;color:#fff;text-align:center;padding:30px 15px}.footer p{color:var(--gold)}.footer a{margin:8px;color:#fff;text-decoration:none}.muted{color:var(--muted)}.small{font-size:13px}.hidden{display:none!important}
+/* Learning overlay */
+.modal{position:fixed;inset:0;background:#071225d9;z-index:20;display:none;align-items:flex-start;justify-content:center;padding:20px;overflow:auto}.modal.open{display:flex}.learning-panel{width:min(900px,100%);background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 20px 70px #0005;margin:auto}.learning-head{background:var(--navy);color:#fff;padding:20px 24px;position:relative}.learning-head h2{color:var(--gold);padding-right:40px}.learning-head p{font-size:13px;color:#e0e7f1}.close-btn{position:absolute;right:17px;top:14px;background:#ffffff20;color:#fff;border:0;border-radius:8px;width:38px;height:38px;font-size:25px;cursor:pointer}.learning-body{display:grid;grid-template-columns:245px 1fr;min-height:430px}.lesson-sidebar{background:#f3f5f9;padding:18px;border-right:1px solid var(--line)}.lesson-sidebar h3{font-size:15px;margin-bottom:12px}.lesson-nav{display:block;width:100%;text-align:left;padding:10px 11px;margin:6px 0;border:1px solid transparent;border-radius:7px;background:transparent;color:var(--ink);cursor:pointer;font-size:13px}.lesson-nav.active{background:#fff;border-color:#e3e8f0;font-weight:700;color:#8a6412}.lesson-nav.done:before{content:'✓ ';color:var(--green);font-weight:bold}.lesson-content{padding:25px;min-width:0}.lesson-content h3{font-size:25px;color:var(--navy);margin-bottom:14px;line-height:1.25}.lesson-content p{margin:0 0 13px}.lesson-content ul{padding-left:22px;margin:8px 0 17px}.lesson-content li{margin:6px 0}.tip{background:#fff8e5;border-left:4px solid var(--gold);padding:13px 15px;border-radius:6px;margin:18px 0}.lesson-actions{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:18px;margin-top:22px}.lesson-actions .right{display:flex;gap:9px;flex-wrap:wrap}.notice{padding:12px 15px;background:#e9f6f0;color:#145d43;border-radius:8px;margin:15px 0;font-size:13px}.empty{padding:25px;background:#fff;border:1px dashed #cbd4e1;border-radius:10px}.toast{position:fixed;bottom:18px;left:50%;transform:translateX(-50%);background:var(--navy);color:#fff;padding:11px 17px;border-radius:8px;z-index:40;box-shadow:var(--shadow);display:none}.toast.show{display:block}
+@media(max-width:700px){.header-inner{justify-content:center;text-align:center}.nav{justify-content:center;gap:12px}.nav a{font-size:13px}.hero{padding:60px 18px}.hero p{font-size:16px}.section{padding:45px 18px}.learning-body{grid-template-columns:1fr}.lesson-sidebar{border-right:0;border-bottom:1px solid var(--line);max-height:190px;overflow:auto}.lesson-sidebar .lesson-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:4px}.lesson-nav{margin:0}.lesson-content{padding:21px}.modal{padding:9px}.learning-panel{border-radius:12px}.lesson-content h3{font-size:22px}}
 </style>
 </head>
-
 <body>
+<header class="site-header"><div class="header-inner">
+  <a class="brand" href="#home"><div class="logo">SUCCESS AFFILIATE ACADEMY</div><div class="tagline">LEARN • PROMOTE • GROW</div></a>
+  <nav class="nav" aria-label="Main navigation"><a href="#home">Home</a><a href="#about">About</a><a href="#courses">Courses</a><a href="#dashboard">My Progress</a><a href="#roadmap">Learning Path</a><a href="#promoters">Promoters</a><a href="#contact">Contact</a></nav>
+</div></header>
+<main>
+<section class="hero" id="home"><div class="hero-inner"><h1>Build Your Digital Future</h1><p>Discover affiliate marketing, develop digital skills and learn how to create valuable content and promote products responsibly.</p><a class="btn" href="#courses">Explore Courses</a> <a class="btn secondary" href="#about">Discover Our Academy</a></div></section>
+<section class="section" id="about"><div class="wrap"><h2 class="section-title">Welcome to Our Academy</h2><p class="intro">Success Affiliate Academy is a learning platform designed to help beginners understand affiliate marketing, digital entrepreneurship and online business skills. Learn step by step and practise at your own pace.</p></div></section>
+<section class="section alt" id="courses"><div class="wrap"><h2 class="section-title">Our Training Programmes</h2><p class="intro">Choose a programme to open its lessons. Read each lesson, move between topics and mark your learning complete.</p><div class="cards" id="courseCards"></div></div></section>
+<section class="section" id="dashboard"><div class="wrap"><h2 class="section-title">Your Learning Dashboard</h2><p class="intro">Your progress is saved in this browser on this device. It is not yet synced to an online student account.</p><div class="dashboard"><div class="stat"><strong id="statCourses">0/6</strong><span>Courses started</span></div><div class="stat"><strong id="statLessons">0/18</strong><span>Lessons completed</span></div><div class="stat"><strong id="statPercent">0%</strong><span>Overall progress</span></div></div><div id="dashboardCourses" class="cards"></div><p class="small muted">Tip: use the same browser and device to continue where you left off. Clearing browser data may erase locally saved progress.</p></div></section>
+<section class="section alt" id="roadmap"><div class="wrap"><h2 class="section-title">Your Learning Journey</h2><p class="intro">Follow these stages as you build your knowledge.</p><div class="roadmap"><div><strong>Step 1:</strong> Learn the basics of affiliate marketing.</div><div><strong>Step 2:</strong> Understand digital marketing.</div><div><strong>Step 3:</strong> Practise content creation.</div><div><strong>Step 4:</strong> Learn website development.</div><div><strong>Step 5:</strong> Understand responsible promotion.</div></div></div></section>
+<section class="section promoter" id="promoters"><div class="wrap"><h2 class="section-title">Promoter Programme</h2><p class="intro">Interested in learning how affiliate promotion works? Discover referral marketing and responsible product promotion.</p><div class="promoter-box"><h3>Learn About Affiliate Promotion</h3><p>Understand how referral links, product recommendations and commission arrangements work.</p><p style="margin-top:12px">Programme registration and eligibility details will be announced when available. No income or commission is guaranteed.</p></div></div></section>
+<section class="section alt" id="faq"><div class="wrap"><h2 class="section-title">Frequently Asked Questions</h2><div class="faq"><details><summary>What is Success Affiliate Academy?</summary><p>It is an educational platform for learning affiliate marketing and digital business skills.</p></details><details><summary>Who can learn here?</summary><p>Beginners interested in learning digital skills and online business fundamentals.</p></details><details><summary>Do I need experience?</summary><p>No. Our introductory lessons are designed for people who are starting from the basics.</p></details><details><summary>Does learning guarantee income?</summary><p>No. Learning affiliate marketing does not guarantee income or business success.</p></details><details><summary>How is my learning progress saved?</summary><p>This version saves completed lessons in your current browser on your device. Online accounts and cross-device syncing have not yet been configured.</p></details></div></div></section>
+<section class="section contact" id="contact"><div class="wrap"><h2 class="section-title">Contact Our Academy</h2><p>Thank you for visiting Success Affiliate Academy.</p><p><strong>Learn • Build • Grow</strong></p><p class="small muted" style="margin-top:10px">Add your official academy email address or contact form here when it is ready.</p></div></section>
+</main>
+<footer class="footer"><h3>SUCCESS AFFILIATE ACADEMY</h3><p>Learn • Promote • Grow</p><p style="margin:12px 0"><a href="#home">Home</a><a href="#courses">Courses</a><a href="#about">About</a><a href="#faq">FAQs</a></p><small>© <span id="year"></span> Success Affiliate Academy. All rights reserved.</small></footer>
 
-<header>
-  <div class="logo">SUCCESS AFFILIATE ACADEMY</div>
-  <p>LEARN • PROMOTE • GROW</p>
-
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#courses">Courses</a>
-    <a href="#roadmap">Learning Path</a>
-    <a href="#promoters">Promoters</a>
-    <a href="#contact">Contact</a>
-  </nav>
-</header>
-
-<div class="hero" id="home">
-  <h1>Build Your Digital Future</h1>
-
-  <p>
-    Discover affiliate marketing, develop digital skills
-    and learn how to create valuable content and promote
-    products responsibly.
-  </p>
-
-  <a class="button" href="#courses">Explore Courses</a>
-  <a class="button" href="#about">Discover Our Academy</a>
-</div>
-
-<section id="about">
-  <h2 class="section-title">Welcome to Our Academy</h2>
-
-  <p class="section-intro">
-    Success Affiliate Academy is a learning platform
-    designed to help beginners understand affiliate
-    marketing, digital entrepreneurship and online
-    business skills.
-  </p>
-</section>
-
-<section class="highlight" id="courses">
-  <h2 class="section-title">Our Training Programmes</h2>
-
-  <p class="section-intro">
-    Explore our learning programmes and study at your pace.
-    Select a lesson to see what you will learn.
-  </p>
-
-  <div class="cards">
-
-    <div class="card">
-      <div class="number">01</div>
-      <h3>Affiliate Marketing Basics</h3>
-      <p>Understand the foundations of affiliate marketing.</p>
-
-      <details class="lesson">
-        <summary>Explore lessons</summary>
-        <div class="lesson-content">
-          <p><strong>Lesson 1:</strong> What is affiliate marketing?</p>
-          <p><strong>Lesson 2:</strong> Understanding affiliates and merchants.</p>
-          <p><strong>Lesson 3:</strong> How referral links work.</p>
-        </div>
-      </details>
-    </div>
-
-    <div class="card">
-      <div class="number">02</div>
-      <h3>Digital Marketing Skills</h3>
-      <p>Discover different ways to communicate online.</p>
-
-      <details class="lesson">
-        <summary>Explore lessons</summary>
-        <div class="lesson-content">
-          <p><strong>Lesson 1:</strong> Introduction to digital marketing.</p>
-          <p><strong>Lesson 2:</strong> Social media fundamentals.</p>
-          <p><strong>Lesson 3:</strong> Understanding your audience.</p>
-        </div>
-      </details>
-    </div>
-
-    <div class="card">
-      <div class="number">03</div>
-      <h3>Content Creation</h3>
-      <p>Learn how to create useful digital content.</p>
-
-      <details class="lesson">
-        <summary>Explore lessons</summary>
-        <div class="lesson-content">
-          <p><strong>Lesson 1:</strong> Writing useful articles.</p>
-          <p><strong>Lesson 2:</strong> Creating educational videos.</p>
-          <p><strong>Lesson 3:</strong> Content planning.</p>
-        </div>
-      </details>
-    </div>
-
-    <div class="card">
-      <div class="number">04</div>
-      <h3>Website Development</h3>
-      <p>Understand how websites are designed and built.</p>
-
-      <details class="lesson">
-        <summary>Explore lessons</summary>
-        <div class="lesson-content">
-          <p><strong>Lesson 1:</strong> Introduction to HTML.</p>
-          <p><strong>Lesson 2:</strong> Understanding CSS.</p>
-          <p><strong>Lesson 3:</strong> Building a simple webpage.</p>
-        </div>
-      </details>
-    </div>
-
-    <div class="card">
-      <div class="number">05</div>
-      <h3>Business Development</h3>
-      <p>Learn basic planning and online business principles.</p>
-
-      <details class="lesson">
-        <summary>Explore lessons</summary>
-        <div class="lesson-content">
-          <p><strong>Lesson 1:</strong> Setting business goals.</p>
-          <p><strong>Lesson 2:</strong> Understanding customers.</p>
-          <p><strong>Lesson 3:</strong> Evaluating business ideas.</p>
-        </div>
-      </details>
-    </div>
-
-    <div class="card">
-      <div class="number">06</div>
-      <h3>Affiliate Ethics</h3>
-      <p>Understand honesty and responsibility in promotion.</p>
-
-      <details class="lesson">
-        <summary>Explore lessons</summary>
-        <div class="lesson-content">
-          <p><strong>Lesson 1:</strong> Honest product reviews.</p>
-          <p><strong>Lesson 2:</strong> Affiliate disclosures.</p>
-          <p><strong>Lesson 3:</strong> Protecting customer trust.</p>
-        </div>
-      </details>
-    </div>
-
-  </div>
-</section>
-
-<section id="roadmap">
-  <h2 class="section-title">Your Learning Journey</h2>
-
-  <p class="section-intro">
-    Follow these stages as you build your knowledge.
-  </p>
-
-  <div class="roadmap">
-    <div><strong>Step 1:</strong> Learn the basics of affiliate marketing.</div>
-    <div><strong>Step 2:</strong> Understand digital marketing.</div>
-    <div><strong>Step 3:</strong> Practise content creation.</div>
-    <div><strong>Step 4:</strong> Learn website development.</div>
-    <div><strong>Step 5:</strong> Understand responsible promotion.</div>
-  </div>
-</section>
-
-<section class="promoter" id="promoters">
-  <h2 class="section-title">Promoter Programme</h2>
-
-  <p class="section-intro">
-    Interested in learning how affiliate promotion works?
-    Discover referral marketing and responsible product promotion.
-  </p>
-
-  <div class="card" style="max-width:650px;margin:auto;">
-    <h3>Learn About Affiliate Promotion</h3>
-    <p>
-      Understand how referral links, product recommendations
-      and commission arrangements work.
-    </p>
-    <p style="margin-top:12px;">
-      Programme registration and eligibility details
-      will be announced when available.
-    </p>
-  </div>
-</section>
-
-<section class="highlight" id="faq">
-  <h2 class="section-title">Frequently Asked Questions</h2>
-
-  <div class="faq">
-    <details>
-      <summary>What is Success Affiliate Academy?</summary>
-      <p>
-        It is an educational platform for learning affiliate
-        marketing and digital business skills.
-      </p>
-    </details>
-
-    <details>
-      <summary>Who can learn here?</summary>
-      <p>
-        Beginners interested in learning digital skills
-        and online business fundamentals.
-      </p>
-    </details>
-
-    <details>
-      <summary>Do I need experience?</summary>
-      <p>
-        No. Our introductory lessons are designed
-        for people who are starting from the basics.
-      </p>
-    </details>
-
-    <details>
-      <summary>Does learning guarantee income?</summary>
-      <p>
-        No. Learning affiliate marketing does not guarantee
-        income or business success.
-      </p>
-    </details>
-  </div>
-</section>
-
-<section class="contact" id="contact">
-  <h2 class="section-title">Contact Our Academy</h2>
-  <p>
-    Thank you for visiting Success Affiliate Academy.
-  </p>
-  <p>Learn • Build • Grow</p>
-</section>
-
-<footer>
-  <h3>SUCCESS AFFILIATE ACADEMY</h3>
-  <p>Learn • Promote • Grow</p>
-
-  <p style="margin:12px 0;">
-    <a href="#home">Home</a>
-    <a href="#courses">Courses</a>
-    <a href="#about">About</a>
-    <a href="#faq">FAQs</a>
-  </p>
-
-  <small>
-    © <span id="year"></span> Success Affiliate Academy.
-    All rights reserved.
-  </small>
-</footer>
-
+<div class="modal" id="learningModal" role="dialog" aria-modal="true" aria-labelledby="modalCourseTitle"><div class="learning-panel"><div class="learning-head"><button class="close-btn" id="closeModal" aria-label="Close lessons">×</button><h2 id="modalCourseTitle">Course</h2><p id="modalCourseDescription"></p></div><div class="learning-body"><aside class="lesson-sidebar"><h3>Course lessons</h3><div class="lesson-list" id="lessonList"></div></aside><article class="lesson-content"><div class="small muted" id="lessonCounter"></div><h3 id="lessonTitle"></h3><div id="lessonBody"></div><div class="lesson-actions"><button class="btn outline" id="prevLesson">← Previous</button><div class="right"><button class="btn dark" id="completeLesson">Mark as complete ✓</button><button class="btn" id="nextLesson">Next lesson →</button></div></div></article></div></div></div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
 <script>
-document.getElementById("year").textContent =
-  new Date().getFullYear();
+const courses = [
+ {id:'affiliate-basics',number:'01',title:'Affiliate Marketing Basics',description:'Understand the foundations of affiliate marketing.',lessons:[
+  {title:'What is affiliate marketing?',body:`<p>Affiliate marketing is a type of performance-based marketing. A business (often called a merchant or advertiser) gives a partner (an affiliate or publisher) a way to refer potential customers to its products or services.</p><p>If a person follows the affiliate's tracked referral link and completes an eligible action, the affiliate may earn a commission under the programme's terms.</p><ul><li>The merchant provides the product or service.</li><li>The affiliate shares useful information and a tracked link.</li><li>The customer decides whether to buy.</li><li>The programme records eligible referrals and applies its commission rules.</li></ul><div class="tip"><strong>Remember:</strong> Affiliate marketing is marketing work. It takes learning, honest communication and effort; income is never guaranteed.</div>`},
+  {title:'Understanding affiliates and merchants',body:`<p>An <strong>affiliate</strong> is a person or business that recommends a product or service using an approved referral method. A <strong>merchant</strong> is the business that owns or supplies the product or service.</p><ul><li><strong>Merchant:</strong> sets programme rules, prices and commission conditions.</li><li><strong>Affiliate:</strong> creates helpful content and refers interested audiences.</li><li><strong>Customer:</strong> reviews the information and makes an independent choice.</li><li><strong>Affiliate network or platform:</strong> may help track referrals and report eligible commissions.</li></ul><p>Always read the programme agreement. It explains permitted promotion methods, payment conditions and restricted claims.</p>`},
+  {title:'How referral links work',body:`<p>A referral link is a special URL containing a tracking identifier. When someone visits the merchant through that link, the programme may record the referral using cookies or another tracking method.</p><ol><li>Apply to an affiliate programme and receive approval.</li><li>Generate a link for an approved product or page.</li><li>Share it in places allowed by the programme.</li><li>A visitor clicks and may complete a qualifying purchase or action.</li><li>The merchant validates the transaction under its terms.</li></ol><div class="tip"><strong>Good practice:</strong> Disclose clearly when a link may earn you a commission. Never claim a click or sale is guaranteed.</div>`}
+ ]},
+ {id:'digital-marketing',number:'02',title:'Digital Marketing Skills',description:'Discover different ways to communicate online.',lessons:[
+  {title:'Introduction to digital marketing',body:`<p>Digital marketing means using online channels and digital technologies to communicate with an audience and promote products, services or ideas.</p><p>Common channels include websites, search engines, email, social media and online video. Each channel serves a different purpose.</p><ul><li>Set a clear goal before choosing a channel.</li><li>Understand who you want to reach.</li><li>Share useful, accurate information.</li><li>Review results and improve your approach.</li></ul>`},
+  {title:'Social media fundamentals',body:`<p>Social media platforms allow people and organisations to publish content, communicate and build communities. Effective use starts with choosing platforms that your intended audience actually uses.</p><ul><li>Complete your profile accurately.</li><li>Choose a consistent topic or theme.</li><li>Publish useful content regularly.</li><li>Reply respectfully to questions and comments.</li><li>Follow each platform's rules and advertising policies.</li></ul><p>Avoid spam, fake engagement and misleading headlines.</p>`},
+  {title:'Understanding your audience',body:`<p>An audience is the group of people your content is intended to help. Understanding their needs makes your communication more relevant.</p><ul><li>Identify their interests and common questions.</li><li>Listen to feedback and read comments carefully.</li><li>Use plain language appropriate to their experience.</li><li>Create content that answers real questions.</li></ul><div class="tip"><strong>Practice:</strong> Write down three questions a beginner might ask about the topic you want to teach.</div>`}
+ ]},
+ {id:'content-creation',number:'03',title:'Content Creation',description:'Learn how to create useful digital content.',lessons:[
+  {title:'Writing useful articles',body:`<p>A useful article answers a reader's question clearly. Start with one topic, organise the information and make the next step easy to understand.</p><ul><li>Choose a specific topic and reader.</li><li>Write a clear headline.</li><li>Use short paragraphs and descriptive headings.</li><li>Check facts, spelling and links.</li><li>Explain when you have a commercial relationship.</li></ul><p>Do not copy another creator's work. Use your own words and credit sources where appropriate.</p>`},
+  {title:'Creating educational videos',body:`<p>Educational videos explain an idea or demonstrate a task. A simple plan helps keep a video focused.</p><ol><li>Decide what viewers should learn.</li><li>Write a short outline or script.</li><li>Record clear audio and steady visuals.</li><li>Demonstrate steps in a logical order.</li><li>Add accurate captions where possible.</li><li>Review the finished video before publishing.</li></ol><p>Use music, images and clips only when you have permission or a suitable licence.</p>`},
+  {title:'Content planning',body:`<p>A content plan helps you publish consistently without choosing a topic at the last minute. A basic plan can be a calendar with a topic, format, audience and publishing date.</p><ul><li>List questions your audience asks.</li><li>Group related topics into themes.</li><li>Mix formats such as articles, short videos and guides.</li><li>Set a realistic publishing schedule.</li><li>Review which content is useful and update it.</li></ul>`}
+ ]},
+ {id:'website-development',number:'04',title:'Website Development',description:'Understand how websites are designed and built.',lessons:[
+  {title:'Introduction to HTML',body:`<p>HTML (HyperText Markup Language) describes the structure and meaning of webpage content. HTML uses elements, usually written with an opening tag and a closing tag.</p><ul><li><code>&lt;h1&gt;</code> creates a main heading.</li><li><code>&lt;p&gt;</code> creates a paragraph.</li><li><code>&lt;a&gt;</code> creates a link.</li><li><code>&lt;img&gt;</code> displays an image.</li><li><code>&lt;section&gt;</code> groups related content.</li></ul><p>A well-structured page uses headings in a logical order and meaningful link text.</p>`},
+  {title:'Understanding CSS',body:`<p>CSS (Cascading Style Sheets) controls how HTML content looks. It can set colours, fonts, spacing, borders and page layouts.</p><p>A CSS rule contains a selector and declarations. For example, <code>p { color: navy; }</code> selects paragraphs and makes their text navy.</p><ul><li>Use consistent colours and typography.</li><li>Keep text readable and contrast strong.</li><li>Use flexible layouts for different screen sizes.</li><li>Test pages on mobile as well as desktop.</li></ul>`},
+  {title:'Building a simple webpage',body:`<p>A basic webpage combines HTML for structure, CSS for presentation and, when needed, JavaScript for interaction.</p><ol><li>Create an <code>index.html</code> file.</li><li>Add the document structure and page content.</li><li>Style the page with CSS.</li><li>Add small interactions with JavaScript if needed.</li><li>Test all links, buttons and forms.</li><li>Publish the files using a hosting service.</li></ol><div class="tip"><strong>Safety:</strong> Never put private passwords, secret API keys or database service-role keys in public website code.</div>`}
+ ]},
+ {id:'business-development',number:'05',title:'Business Development',description:'Learn basic planning and online business principles.',lessons:[
+  {title:'Setting business goals',body:`<p>A business goal describes an outcome you want to achieve. Clear goals help you decide what to do and how to measure progress.</p><ul><li>Be specific about the result.</li><li>Choose a measure that can be checked.</li><li>Set a realistic timeframe.</li><li>Break a large goal into smaller actions.</li><li>Review progress and adjust when necessary.</li></ul><p>For example, a learning goal could be to publish two helpful beginner guides this month.</p>`},
+  {title:'Understanding customers',body:`<p>Customers are people or organisations that may use a product or service. Understanding their needs helps a business create relevant offers and provide better support.</p><ul><li>Ask what problem they are trying to solve.</li><li>Listen without making assumptions.</li><li>Explain prices, limitations and terms clearly.</li><li>Protect personal information.</li><li>Use feedback to improve the service.</li></ul>`},
+  {title:'Evaluating business ideas',body:`<p>Before investing time or money in an idea, examine whether it solves a real problem and whether it is practical to deliver.</p><ul><li>Describe the problem and proposed solution.</li><li>Identify the people who may need it.</li><li>Research alternatives and competitors.</li><li>Estimate costs, time and required skills.</li><li>Test the idea on a small scale and learn from feedback.</li></ul><div class="tip"><strong>Remember:</strong> Research reduces uncertainty, but it cannot guarantee that a business will succeed.</div>`}
+ ]},
+ {id:'affiliate-ethics',number:'06',title:'Affiliate Ethics',description:'Understand honesty and responsibility in promotion.',lessons:[
+  {title:'Honest product reviews',body:`<p>An honest review helps people make informed decisions. Describe what you know, distinguish personal experience from research and avoid claims you cannot support.</p><ul><li>Explain both strengths and limitations.</li><li>Do not invent personal use or results.</li><li>Check important product details.</li><li>Update content when information changes.</li><li>Do not pressure people into buying.</li></ul>`},
+  {title:'Affiliate disclosures',body:`<p>A disclosure tells your audience when you may receive a commission or other benefit from a recommendation. It should be easy to notice and understand before someone acts on the recommendation.</p><p>Use clear wording, such as: “I may earn a commission if you buy through links on this page, at no extra cost to you.” Adapt disclosures to the actual arrangement and follow applicable laws and platform rules.</p><div class="tip"><strong>Good practice:</strong> Do not hide disclosures in a footer, a long list of hashtags or difficult-to-find terms.</div>`},
+  {title:'Protecting customer trust',body:`<p>Trust is built through accurate information, respect and responsible handling of people's data.</p><ul><li>Be clear about who you are and what you offer.</li><li>Respect privacy and obtain consent where required.</li><li>Use secure services and protect account credentials.</li><li>Correct mistakes promptly.</li><li>Never promise guaranteed earnings or results.</li></ul><p>Long-term credibility is more valuable than a short-term click.</p>`}
+ ]}
+];
+const STORAGE_KEY='saa_v9_completed_lessons';
+let completed = loadProgress();
+let activeCourse=0, activeLesson=0;
+function loadProgress(){try{const value=JSON.parse(localStorage.getItem(STORAGE_KEY)||'{}');return value&&typeof value==='object'?value:{}}catch(e){return {}}}
+function saveProgress(){try{localStorage.setItem(STORAGE_KEY,JSON.stringify(completed));}catch(e){showToast('Progress could not be saved in this browser.');}}
+function isDone(courseIndex,lessonIndex){return !!(completed[courses[courseIndex].id]||[]).includes(lessonIndex)}
+function courseDoneCount(i){return courses[i].lessons.filter((_,j)=>isDone(i,j)).length}
+function totalDone(){return courses.reduce((sum,c,i)=>sum+courseDoneCount(i),0)}
+function renderCourses(){const host=document.getElementById('courseCards');host.innerHTML=courses.map((c,i)=>{const done=courseDoneCount(i),pct=Math.round(done/c.lessons.length*100);return `<article class="card"><div class="number">${c.number}</div><h3>${c.title}</h3><p>${c.description}</p><div class="card-meta"><span>${c.lessons.length} lessons</span><span>${done}/${c.lessons.length} complete</span></div><div class="progress-track" aria-label="${pct}% complete"><div class="progress-fill" style="width:${pct}%"></div></div><button class="btn" type="button" onclick="openCourse(${i})">${done?'Continue learning':'Explore lessons'} →</button></article>`}).join('');}
+function renderDashboard(){const done=totalDone(),pct=Math.round(done/18*100),started=courses.filter((c,i)=>courseDoneCount(i)>0).length;document.getElementById('statCourses').textContent=started+'/6';document.getElementById('statLessons').textContent=done+'/18';document.getElementById('statPercent').textContent=pct+'%';document.getElementById('dashboardCourses').innerHTML=courses.map((c,i)=>{const n=courseDoneCount(i),p=Math.round(n/3*100);return `<article class="card"><h3>${c.title}</h3><div class="card-meta"><span>${n} of 3 lessons</span><span>${p}%</span></div><div class="progress-track"><div class="progress-fill" style="width:${p}%"></div></div><button class="btn outline" type="button" onclick="openCourse(${i})">Open course</button></article>`}).join('');}
+function renderLesson(){const c=courses[activeCourse],lesson=c.lessons[activeLesson];document.getElementById('modalCourseTitle').textContent=c.title;document.getElementById('modalCourseDescription').textContent=c.description;document.getElementById('lessonCounter').textContent=`LESSON ${activeLesson+1} OF ${c.lessons.length}`;document.getElementById('lessonTitle').textContent=lesson.title;document.getElementById('lessonBody').innerHTML=lesson.body;document.getElementById('lessonList').innerHTML=c.lessons.map((l,j)=>`<button class="lesson-nav ${j===activeLesson?'active':''} ${isDone(activeCourse,j)?'done':''}" type="button" onclick="selectLesson(${j})">${j+1}. ${l.title}</button>`).join('');document.getElementById('prevLesson').disabled=activeLesson===0;document.getElementById('nextLesson').disabled=activeLesson===c.lessons.length-1;const complete=document.getElementById('completeLesson');complete.textContent=isDone(activeCourse,activeLesson)?'Completed ✓':'Mark as complete ✓';complete.classList.toggle('dark',!isDone(activeCourse,activeLesson));complete.classList.toggle('outline',isDone(activeCourse,activeLesson));}
+function openCourse(i){activeCourse=i;activeLesson=0;renderLesson();document.getElementById('learningModal').classList.add('open');document.body.style.overflow='hidden';}
+function closeCourse(){document.getElementById('learningModal').classList.remove('open');document.body.style.overflow='';renderCourses();renderDashboard();}
+function selectLesson(i){activeLesson=i;renderLesson();}
+function markComplete(){const id=courses[activeCourse].id;if(!completed[id])completed[id]=[];if(!completed[id].includes(activeLesson)){completed[id].push(activeLesson);saveProgress();showToast('Lesson marked complete. Your progress has been saved on this device.');}renderLesson();renderCourses();renderDashboard();}
+function showToast(message){const t=document.getElementById('toast');t.textContent=message;t.classList.add('show');clearTimeout(showToast.timer);showToast.timer=setTimeout(()=>t.classList.remove('show'),2600);}
+document.getElementById('closeModal').addEventListener('click',closeCourse);document.getElementById('learningModal').addEventListener('click',e=>{if(e.target.id==='learningModal')closeCourse()});document.getElementById('prevLesson').addEventListener('click',()=>{if(activeLesson>0)selectLesson(activeLesson-1)});document.getElementById('nextLesson').addEventListener('click',()=>{if(activeLesson<courses[activeCourse].lessons.length-1)selectLesson(activeLesson+1)});document.getElementById('completeLesson').addEventListener('click',markComplete);document.addEventListener('keydown',e=>{if(e.key==='Escape'&&document.getElementById('learningModal').classList.contains('open'))closeCourse()});document.getElementById('year').textContent=new Date().getFullYear();renderCourses();renderDashboard();
+
+/* Supabase project settings retained. This public publishable key is intended for browser use.
+   Authentication and cloud progress syncing require configured Supabase Auth and database tables.
+   Never place a Supabase service_role/secret key in this public file. */
+const SUPABASE_URL='https://nvnsfgervpblwalamxtu.supabase.co';
+const SUPABASE_PUBLISHABLE_KEY='sb_publishable_nXeF7SkoFkzvWfjuPAyzEg_OhbBjNUw';
+let supabaseClient=null;
+(function initSupabase(){if(!SUPABASE_URL||!SUPABASE_PUBLISHABLE_KEY)return;const script=document.createElement('script');script.src='https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2';script.onload=()=>{if(window.supabase?.createClient){supabaseClient=window.supabase.createClient(SUPABASE_URL,SUPABASE_PUBLISHABLE_KEY);console.info('Supabase client initialized. Auth and database features still need configuration.');}};script.onerror=()=>console.warn('Supabase library could not be loaded; local course learning still works.');document.head.appendChild(script);})();
 </script>
-
-<!-- SUPABASE CONNECTION -->
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-
-<script>
-  const SUPABASE_URL = 'https://nvnsfgervpblwalamxtu.supabase.co';
-
-  const SUPABASE_PUBLISHABLE_KEY = 'sb_publishable_nXeF7SkoFkzvWfjuPAyzEg_OhbBjNUw';
-
-  const supabaseClient = window.supabase.createClient(
-    SUPABASE_URL,
-    SUPABASE_PUBLISHABLE_KEY
-  );
-
-  console.log('Supabase connected successfully!');
-</script>
-
 </body>
 </html>
