@@ -485,5 +485,21 @@ document.getElementById("year").textContent =
   new Date().getFullYear();
 </script>
 
+<!-- SUPABASE CONNECTION -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<script>
+  const SUPABASE_URL = 'https://nvnsfgervpblwalamxtu.supabase.co';
+
+  const SUPABASE_PUBLISHABLE_KEY = 'sb_publishable_nXeF7SkoFkzvWfjuPAyzEg_OhbBjNUw';
+
+  const supabaseClient = window.supabase.createClient(
+    SUPABASE_URL,
+    SUPABASE_PUBLISHABLE_KEY
+  );
+
+  console.log('Supabase connected successfully!');
+</script>
+
 </body>
 </html>
