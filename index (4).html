@@ -98,10 +98,41 @@ function openAuth(){authModal.classList.add('open');document.body.style.overflow
 function closeAuth(){authModal.classList.remove('open');document.body.style.overflow='';}
 function renderAuthState(user){currentUser=user||null;const openBtn=document.getElementById('openAuth');const summary=document.getElementById('signedInSummary');const actions=document.getElementById('signedInActions');const form=document.getElementById('authForm');if(user){openBtn.textContent='My account';summary.classList.remove('hidden');summary.textContent='Signed in as '+(user.user_metadata?.full_name||user.email);actions.classList.remove('hidden');form.classList.add('hidden');document.getElementById('accountEmail').textContent=user.email||'';setAuthMessage('You are signed in. Your account is authenticated. Course progress is still stored locally until cloud progress syncing is configured.');}else{openBtn.textContent='Student login';summary.classList.add('hidden');actions.classList.add('hidden');form.classList.remove('hidden');}}
 async function signIn(){if(!supabaseClient){setAuthMessage('Account service is not ready. Check the Supabase setup instructions and try again.',true);return;}const email=document.getElementById('authEmail').value.trim();const password=document.getElementById('authPassword').value;if(!email||!password){setAuthMessage('Enter your email address and password.',true);return;}const {data,error}=await supabaseClient.auth.signInWithPassword({email,password});if(error){setAuthMessage(error.message,true);return;}renderAuthState(data.user);setAuthMessage('You are signed in successfully.');}
-async function signUp(){if(!supabaseClient){setAuthMessage('Account service is not ready. Complete the Supabase setup instructions first.',true);return;}const name=document.getElementById('authName').value.trim();const email=document.getElementById('authEmail').value.trim();const password=document.getElementById('authPassword').value;if(!name){setAuthMessage('Enter your full name to create an account.',true);return;}if(!email||password.length<8){setAuthMessage('Enter a valid email and a password with at least 8 characters.',true);return;}const {data,error}=await supabaseClient.auth.signUp({email,password,options:{data:{full_name:name}}});if(error){setAuthMessage(error.message,true);return;}if(data.session){renderAuthState(data.user);setAuthMessage('Your account has been created and you are signed in.');}else{setAuthMessage('Registration received. Check your email for the confirmation link, then return here to sign in.');}}
-async function signOut(){if(!supabaseClient)return;const {error}=await supabaseClient.auth.signOut();if(error){setAuthMessage(error.message,true);return;}renderAuthState(null);setAuthMessage('You have signed out.');}
+async function signUp(){if(!supabaseClient){setAuthMessage('Account service is not ready. Complete the Supabase setup instructions first.',true);return;}const name=document.getElementById('authName').value.trim();const email=document.getElementById('authEmail').value.trim();const password=document.getElementById('authPassword').value;if(!name){setAuthMessage('Enter your full name to create an account.',true);return;}if(!email||password.length<8){setAuthMessage('Enter a valid email and a password with at least 8 characters.',true);return;}if(error){setAuthMessage(error.message,true);return;}if(data.session){renderAuthState(data.user);setAuthMessage('Your account has been created and you are signed in.');}else{setAuthMessage('Registration received. Check your email for the confirmation link, then return here to sign in.');}}
+async function signOut(){if(!supabaseClient)return;const {error}=await supabaseClient.auth.signOut();if(error){setAuthMessage(error.message,true);return;}renderAuthState(null);setAuthMessage('You have signed out.');}const {data,error}=await supabaseClient.auth.signUp({
+  email,
+  password,
+  options:{
+    data:{full_name:name},
+    emailRedirectTo:window.location.origin + window.location.pathname
+  }
+});supabaseClient=window.supabase.createClient(
+  SUPABASE_URL,
+  SUPABASE_PUBLISHABLE_KEY,
+  {
+    auth:{
+      detectSessionInUrl:true,
+      persistSession:true,
+      autoRefreshToken:true
+    }
+  }
+);
 document.getElementById('openAuth').addEventListener('click',openAuth);document.getElementById('closeAuth').addEventListener('click',closeAuth);authModal.addEventListener('click',e=>{if(e.target===authModal)closeAuth()});document.getElementById('signInBtn').addEventListener('click',signIn);document.getElementById('signUpBtn').addEventListener('click',signUp);document.getElementById('signOutBtn').addEventListener('click',signOut);
-(function initSupabase(){if(!SUPABASE_URL||!SUPABASE_PUBLISHABLE_KEY){setAuthMessage('Supabase project settings are missing.',true);return;}const script=document.createElement('script');script.src='https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2';script.onload=async()=>{if(window.supabase?.createClient){supabaseClient=window.supabase.createClient(SUPABASE_URL,SUPABASE_PUBLISHABLE_KEY);const {data:{session}}=await supabaseClient.auth.getSession();renderAuthState(session?.user||null);supabaseClient.auth.onAuthStateChange((_event,session)=>renderAuthState(session?.user||null));setAuthMessage('Account service connected. Create an account or sign in.');}};script.onerror=()=>{setAuthMessage('Could not load the account service. Check your internet connection and refresh.',true);};document.head.appendChild(script);})();
+(function initSupabase(){if(!SUPABASE_URL||!SUPABASE_PUBLISHABLE_KEY){setAuthMessage('Supabase project settings are missing.',true);return;}const script=document.createElement('script');script.src='https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2';script.onload=async()=>{if(window.supabase?.createClient){setAuthMessage('Account service connected. Create an account or sign in.');}};script.onerror=()supabaseClient.auth.onAuthStateChange((event,session)=>{
+  renderAuthState(session?.user||null);
+
+  if(event==='SIGNED_IN' && session?.user){
+    openAuth();
+    setAuthMessage('Welcome! Your student account is now active.');
+  }
+});
+
+const {data:{session}}=await supabaseClient.auth.getSession();
+renderAuthState(session?.user||null);
+
+if(session?.user){
+  setAuthMessage('Welcome back! You are signed in.');
+}=>{setAuthMessage('Could not load the account service. Check your internet connection and refresh.',true);};document.head.appendChild(script);})();
 </script>
 </body>
 </html>
